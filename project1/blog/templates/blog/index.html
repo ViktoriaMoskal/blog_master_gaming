@@ -4,37 +4,21 @@
     {% endblock title %}
 {% block content %}
         <article>
+            {% for post in posts %}
             <div class="card mb-3">
-                <h3 class="card-title">Fortnite</h3>
+                <h3 class="card-title">{{post.title}}</h3>
                 <a href="#"><img src="https://cdn2.unrealengine.com/21br-metaimage-lineup-1920x1080-44acd5f27136.jpg" class="card-img-top" alt="Fortnite"></a>
                 <div class="card-body">
-                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe totam
-                        consequuntur iusto corrupti dolorum reiciendis odio sint obcaecati vitae dignissimos laboriosam
-                        facilis quasi mollitia commodi ut animi repellat magni id ex laborum, enim officiis eveniet
-                        vero! Distinctio mollitia quas eos nesciunt nisi laudantium dolorum, obcaecati magni dolores.
-                        Consectetur nostrum asperiores natus odit quisquam? Quis quaerat optio quam quae officiis sunt
-                        soluta sequi blanditiis consequuntur cumque nemo fugit esse aliquam quos, non aspernatur officia
-                        laboriosam reprehenderit inventore reiciendis omnis eveniet hic? Sapiente pariatur omnis, earum
-                        dolore fugit saepe molestias hic iure autem atque quidem repellendus architecto, totam porro sed
-                        odio iusto. Consectetur sed eum tempora officiis dignissimos, sunt doloribus harum eaque magnam
-                        eos, omnis facilis beatae eligendi voluptas a commodi hic? Quisquam beatae ipsam quod inventore
-                        cumque harum temporibus sit? Nobis obcaecati amet voluptas autem quos explicabo illo ipsam odio
-                        quaerat cumque aliquam iusto cum minus fugit pariatur, eos enim. Eum, cumque? Adipisci suscipit
-                        reprehenderit accusantium saepe perspiciatis consequatur aliquam officiis inventore minima
-                        asperiores in molestiae doloribus deserunt delectus esse aliquid neque omnis, similique earum
-                        assumenda maxime beatae laboriosam. Animi quae molestias laborum quos possimus quasi alias
-                        labore sed sint velit repudiandae, quo tempora iste tempore. Placeat quia sed quos itaque,
-                        ducimus dignissimos error explicabo dolores aliquid, similique perspiciatis, delectus maxime
-                        iure deserunt non recusandae eos reprehenderit repellendus hic natus iste. In aliquid dolore
-                        mollitia voluptates tempore sint molestiae, autem earum. Blanditiis, quo quasi? Magni harum
-                        deleniti ad minus natus, ex consequatur distinctio voluptate quidem dolores aliquid optio animi,
-                        pariatur odit?</p>
+                    <p class="card-text">{{post.body}}</p>
                     <p class="card-text">
                         <a href="#">MOBA</a>
                         <a href="#">online</a>
                     </p>
+                    <p>{{post.date_pub}}</p>
                 </div>
             </div>
 
+
+{% endfor %}
         </article>
 {% endblock %}

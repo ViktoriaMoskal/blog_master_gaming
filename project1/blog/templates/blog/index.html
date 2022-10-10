@@ -1,24 +1,13 @@
 {% extends 'blog/base_blog.html' %}
-    {% block title %}
-        Master Gaming Home
-    {% endblock title %}
+{% block title %}
+Master Gaming Home
+{% endblock title %}
 {% block content %}
-        <article>
-            {% for post in posts %}
-            <div class="card mb-3">
-                <h3 class="card-title">{{post.title}}</h3>
-                <a href="{{post.get_absolute_url}}"><img src="https://cdn2.unrealengine.com/21br-metaimage-lineup-1920x1080-44acd5f27136.jpg" class="card-img-top" alt="Fortnite"></a>
-                <div class="card-body">
-                    <p class="card-text">{{post.body}}</p>
-                    <p class="card-text">
-                        <a href="#">MOBA</a>
-                        <a href="#">online</a>
-                    </p>
-                    <p>{{post.date_pub}}</p>
-                </div>
-            </div>
+<article>
+    {% for post in posts %}
+   {% include "blog/includes/card_template.html" %}
 
 
-{% endfor %}
-        </article>
+    {% endfor %}
+</article>
 {% endblock %}

@@ -11,3 +11,7 @@ python manage.py migrate
 
 #регистрируем супер пользователя(Maska)
 python manage.py createsuperuser
+
+#робота с изображениями
+pip install pillow
+

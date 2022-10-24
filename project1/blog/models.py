@@ -16,6 +16,9 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('post_detail_url', kwargs={'slug': self.slug})
 
+    class Meta:
+        ordering=['-date_pub']
+
 
 class Tag(models.Model):
     title = models.CharField(max_length=50, db_index=True)
